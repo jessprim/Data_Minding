@@ -1,2 +1,2 @@
-# Something_Test
-This is a test 
+# Git Tutorial
+This is a tutorial to learn how to Clone a GitHub Repository
