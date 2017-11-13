@@ -1,0 +1,341 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Intro to R</title>
+<link rel="stylesheet" href="https://stackedit.io/res-min/themes/base.css" />
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body><div class="container"><h2 id="mindset-and-grit">Mindset and Grit</h2>
+
+
+
+<h5 id="do-you-believe-you-have-a-set-of-fixed-traits">Do you believe you have a set of fixed traits?</h5>
+
+<p>It’s something we don’t talk about - and yet it controls our every day decisions and actions.</p>
+
+<p>Carol Dweck, Instructor of Psychology at Stanford University, first outlined the concept of a growth mindset and a fixed mindset.</p>
+
+<blockquote>
+  <p><strong>In a fixed mindset</strong>, people believe their basic qualities, like their <br>
+  intelligence or talent, are simply <em>fixed traits.</em>  <br>
+  They also believe that <em>talent alone creates success—without effort</em>.</p>
+  
+  <p>They’re wrong. </p>
+  
+  <p><strong>In a growth mindset</strong>, people believe that their most <br>
+  basic abilities can be developed through dedication and hard <br>
+  work—brains and talent are just the starting point. This view creates <br>
+  a <em>love of learning</em> and a <em>resilience</em> that is essential for great <br>
+  accomplishment.    </p>
+  
+  <p>Virtually all great people have had these qualities.</p>
+</blockquote>
+
+<p>The resilience mentioned above refers to <strong>Grit.</strong> Grit, according to psychologist Angela Duckworth, is the level of sustained passion one has towards a longterm goal or end state. This is something that must be developed, like a muscle. It take practice to work and grind to find success. </p>
+
+<p>Angela says:</p>
+
+<blockquote>
+  <p><em>“You cannot will yourself to be interested in something you’re not interested in. But <strong>you can actively discover and deepen your interest</strong>. So <strong>once you’ve fostered an interest</strong>, then, and only then, can you <strong>do the kind of difficult, effortful and sometimes frustrating practice that truly makes you better.</strong></em> </p>
+</blockquote>
+
+<p>This is great to keep in mind when learning something new - especially when learning computers and technology. It can be VERY frustrating and 80% of the struggle is debugging and checking for errors. </p>
+
+<p>There is nothing more painful than running code that won’t work - and you cannot understand why. You will want to throw your computer across the room and you will probably develop (if not already) the mouth of a sailor. </p>
+
+<p>If anyone needs any help with homework, programming, or general questions please feel free to email me at jessprim1@gmail.com</p>
+
+<p><strong><em>That being said the best part is the frustration because those are lessons/moments you will never forget.</em></strong> </p>
+
+
+
+<h1 id="programming-in-r">Programming in R</h1>
+
+<p>We need to install 2 pieces of software, R (the language) and RStudio (the IDE). <br>
+When you write in any language, there are typically two pieces. The language and the IDE. </p>
+
+<blockquote>
+  <p><strong>Integrated Development Environment (IDE):</strong> A software application that provides tools and other such facilities to computer programmers for software development.</p>
+</blockquote>
+
+<p><em>An IDE is a GUI</em></p>
+
+<blockquote>
+  <p><strong>Graphical User Interface (GUI):</strong> A user interface that includes graphical elements, such as buttons, icons.. etc.</p>
+</blockquote>
+
+<p>If we did not use the R IDE we would use command line instead…</p>
+
+
+
+<h3 id="installing-r">Installing R:</h3>
+
+<ol>
+<li>In your browser visit   :  <code>www.r-project.org</code></li>
+<li>Under “Getting Started”,  click <strong>“download R”</strong> link in the middle of the page</li>
+<li>You will be led to a page titled “CRAN Mirrors”. </li>
+<li>Scroll down to USA and find the link to the University of Kansas, Lawrence, KS. </li>
+<li>There are two links for Lawrence, select either one. </li>
+<li>You will be redirected to “The Comprehensive R Archive Network” </li>
+<li>Under “Download and Install R” select the Download link for whatever system your machine requires. Then follow the directions below:</li>
+</ol>
+
+<h4 id="r-for-windows">R for Windows:</h4>
+
+<ol>
+<li>Click “Download R for Windows” </li>
+<li>Click “Install R for the first time” link at the top of the page</li>
+<li>Click “Download R 3.4.2 for Windows” and save the executable file somewhere on your machine. Run the .exe file and follows the installation instructions. </li>
+</ol>
+
+<h4 id="r-for-mac-os">R For Mac OS:</h4>
+
+<ol>
+<li>Click “Download R for (Mac) OS X” </li>
+<li>Click on the file “R - 3.4.2.pkg”</li>
+<li>Save the .pkg file somewhere on your machine. Double click the file to open and follow the install instructions.</li>
+</ol>
+
+<h3 id="installing-rstudio">Installing RStudio:</h3>
+
+<ol>
+<li>Visit the site: <code>www.rstudio.com</code></li>
+<li>Click on “Download RStudio Desktop”</li>
+<li>Select the version required for your system. </li>
+<li>Save and run the file</li>
+</ol>
+
+<h3 id="fundamental-concepts">Fundamental Concepts</h3>
+
+<p><strong>Data Types:</strong> <br>
+R is an object-oriented language. This means everything in R is considered an object. </p>
+
+<p>There are 6 object types in R:</p>
+
+<ul>
+<li>Character <code>"a", "Jessica"</code></li>
+<li>Numeric <code>2, 7.9</code></li>
+<li>Integer<code>2L</code></li>
+<li>Logical (Boolean) <code>True, False</code></li>
+<li>Complex<code>2 + 5i</code></li>
+</ul>
+
+<p>There are a lot of functions we can use to examine our data more closely:</p>
+
+<blockquote>
+  <p>class() - What kind of object is it? <br>
+  typeof() - What is the object’s data type? <br>
+  length() - How long is it, how many dimensions? <br>
+  attributes() - Is there any metadata?</p>
+</blockquote>
+
+<p><strong>Data Structures:</strong> <br>
+In computer science a data structure is a way of organising and storing data. The way data is store is important because it determines how it can be accessed and modified. </p>
+
+<p>R’s data structures include:</p>
+
+<ul>
+<li>Atomic Vectors</li>
+<li>Data frame</li>
+<li>Factors</li>
+<li>Matrix</li>
+<li>List</li>
+</ul>
+
+<h4 id="vectors"><strong>Vectors:</strong></h4>
+
+<p>The atomic vector is the simplest data structure in R. A vector is a collection of elements of type character, logical, integer, or numeric. </p>
+
+<p>We can create a vector like so:</p>
+
+<blockquote>
+  <p>x  &lt;-  c(3, 8, 9, 7, 6, 7, 1, 2) <br>
+   x &lt;- c(“Jessica”, “Alexa”, “Harrison”, “Jill”, “Edward”) <br>
+   n &lt;- c(FALSE, TRUE, TRUE, FALSE)</p>
+</blockquote>
+
+<p>If you type </p>
+
+<blockquote>
+  <p>x</p>
+</blockquote>
+
+<p>in your console, you will see the contents of x.</p>
+
+<p>A vector can also be created like this:</p>
+
+<blockquote>
+  <p>vector(“character”, length = 3) <br>
+  character(3) <br>
+  logical(4) <br>
+  numeric(8)</p>
+</blockquote>
+
+<p><strong>Concatenate:</strong> <br>
+c( ) means concatenate. To concatenate is to put elements together.  <br>
+You can add more elements to a vector like so:</p>
+
+<blockquote>
+  <p>m &lt;- c(“lisa”, “sally”, “winston”) <br>
+  m <br>
+  m &lt;- c(m, “olga”) <br>
+  m <br>
+  m &lt;- c(“danny”, m)</p>
+</blockquote>
+
+<p><strong>Sequences:</strong> <br>
+You can also create a sequence of numbers!</p>
+
+<blockquote>
+  <p>sequence &lt;- 20:30 <br>
+  seq(8) <br>
+  seq(from = 2, to  = 12, by = 0.5)</p>
+</blockquote>
+
+<p><strong>NAs and Missing Data:</strong> <br>
+NA (Not Available) represents missing data in R. R can recognise missing data and has built in functions that allow you to explore NAs in more detail.</p>
+
+<p>NA functions include:</p>
+
+<blockquote>
+  <p>is.na( ) <br>
+  anyNA( )</p>
+</blockquote>
+
+<p>Let’s see how these work:</p>
+
+<blockquote>
+  <p>z &lt;- c(“The”, “quick”, “brown, “fox”, NA, NA, NA, “lazy”, “dog”) <br>
+  a &lt;- c(“The”, “quick”, “brown, “fox”, “jumped”, “over”,  “the”, “lazy”, “dog”) <br>
+  is.na(z) <br>
+  is.na(a) <br>
+  anyNA(z) <br>
+  anyNA(a)</p>
+</blockquote>
+
+<p>You may come across other values interpreted by R:</p>
+
+<ul>
+<li>Inf: Infinity</li>
+<li>NaN: Not a Number</li>
+</ul>
+
+<p>These cannot be found by is.na or anyNA. Rather, use:</p>
+
+<blockquote>
+  <p>is.infinite( ) <br>
+  is.nan( )</p>
+</blockquote>
+
+<p><strong>Attributes:</strong> <br>
+Objects have attributes, which are details about the object. This is considered metadata: data about the data. You can use these commands to look at an objects attributes:</p>
+
+<blockquote>
+  <p>levels( ) <br>
+  dim( ) <br>
+  names( ) <br>
+  dimnames( ) <br>
+  class( ) <br>
+  attributes( )</p>
+</blockquote>
+
+
+
+<h4 id="matrices"><strong>Matrices:</strong></h4>
+
+<p>A matrix a 2-D vector. A vector is considered to by 1 dimensional and thus when we print some defined vector we see a list of data. However, when we look at a matrix we see the beginnings of what looks like a data table, with rows and columns. </p>
+
+<p>Let’s make a matrix:</p>
+
+<blockquote>
+  <p>matrix_1 &lt;- matrix(nrow = 5, ncol = 5) <br>
+  matrix_1 <br>
+  dim(matrix_1)</p>
+</blockquote>
+
+<p>We can also use cbind( ) or rbind( ) to combine rows and columns and make a matrix:</p>
+
+<blockquote>
+  <p>one &lt;- 1:5 <br>
+  two &lt;- 6:10 <br>
+  cbind(one, two) <br>
+  rbind(one, two)</p>
+</blockquote>
+
+<h4 id="lists"><strong>Lists:</strong></h4>
+
+<p>A list is like a container in R. Unlike vectors, lists can contain mixed data types. Lists can even contain lists. Inception. We can make lists in two ways. The first way we make a list is by explicitly making one:</p>
+
+<blockquote>
+  <p>l1 &lt;- list(4, “apple”, FALSE, 10.6) <br>
+  l1</p>
+</blockquote>
+
+<p>The second way we make a list is through coercion. This is a very useful technique to learn in R. You will probably use coercion more than you think once you get going analysing data. Using the command as.list( ) we can make a vector into a list. </p>
+
+<blockquote>
+  <p>v_2 &lt;- 1:5 <br>
+  v_2 &lt;- as.list(v_2) <br>
+  length(v_2)</p>
+</blockquote>
+
+<p><strong>Names:</strong> <br>
+Elements can have names, remember names( ) was an attribute we learned earlier. </p>
+
+<blockquote>
+  <p>l_3 &lt;- list( a = “Jessica”, b = 1:4, data = head(cars)) <br>
+  l_3 <br>
+  names(l_3)</p>
+</blockquote>
+
+<p>You can reference the name of an element with the $ symbol</p>
+
+<blockquote>
+  <p>l_3<script type="math/tex" id="MathJax-Element-4">a  
+  l_3</script>data</p>
+</blockquote>
+
+
+
+<h4 id="data-frames"><strong>Data Frames:</strong></h4>
+
+<p>Now we’ve gotten to the sacred data frame, a popular data type in R that any statistician uses all the time. A data frame is a list with a fixed length. If you load in data with 20 rows, then every element will have 20 rows. </p>
+
+<p>We can create a data frame in R just by reading in data. Read in commands are:</p>
+
+<blockquote>
+  <p>read.csv( ) <br>
+  read.table( ) <br>
+  mfread( )</p>
+</blockquote>
+
+<p>You can also create a data frame on your own:</p>
+
+<blockquote>
+  <p>data.df &lt;- data.frame( x = letters[1:5], y = 1:5, z = 6:10) <br>
+  data.df</p>
+</blockquote>
+
+<p>We can look at our data frame by using these commands:</p>
+
+<blockquote>
+  <p>head( ) <br>
+  tail( ) <br>
+  summary( ) <br>
+  names( ) <br>
+  nrow( ) <br>
+  ncol( )</p>
+</blockquote>
+
+
+
+<h3 id="practice">Practice:</h3>
+
+<p>R has some built in data packages. We can explore the functions we just learned with the data.</p>
+
+<p><em>Finding data is more difficult than you think! If you want to explore some places try Kaggle.com or KDnuggets.come for free data.</em></p>
+
+<hr></div></body>
+</html>
